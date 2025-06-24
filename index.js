@@ -9,6 +9,11 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('API conectada con éxito');
+});
+
+
 // GET all posts
 app.get('/posts', async (req, res) => {
   try {
